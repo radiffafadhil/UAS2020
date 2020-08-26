@@ -25,14 +25,15 @@ $result = mysqli_query($mysqli, "SELECT * FROM mahasiswa ORDER BY nim DESC");
     <a href="add.php">
       <button type="button" class="btn btn-primary">Tambah Baru</button>
     </a>
-    <table width="80%" border="1">
+    <table class="table" border="1">
+    <thead align="center" class="thead-dark">
       <tr>
         <th>NIM</th>
         <th>Nama</th>
-        <th>alamat</th>
+        <th>Alamat</th>
         <th>Jenis Kelamin</th>
-        <th>Action</th>
-      </tr>
+        <th align="center">Action</th>
+      </tr></thead>
 
       <?php  
     while($user_data = mysqli_fetch_array($result)) {         
