@@ -3,7 +3,7 @@
 include_once("config.php");
 
 // Fetch all users data from database
-$result = mysqli_query($mysqli, "SELECT * FROM mahasiswa ORDER BY nim DESC");
+$result = mysqli_query($mysqli, "SELECT * FROM mahasiswa ORDER BY nim asc");
 ?>
 
 <!DOCTYPE html>
@@ -37,20 +37,14 @@ $result = mysqli_query($mysqli, "SELECT * FROM mahasiswa ORDER BY nim DESC");
 
       <?php  
     while($user_data = mysqli_fetch_array($result)) {         
-        echo "<tr>"; echo "
-      <td>".$user_data['nim']."</td>
-      "; echo "
-      <td>".$user_data['nama']."</td>
-      "; echo "
-      <td>".$user_data['alamat']."</td>
-      "; echo "
-      <td>".$user_data['jenis_kelamin']."</td>
-      "; echo '
-      <td>
-        <a href="edit.php?nim=$user_data[nim]">Edit</a> |
-        <a href="delete.php?nim=$user_data[nim]">Delete</a>
-      </td>
-      '; } ?>
+        echo "<tr>";
+        echo "<td>".$user_data['nim']."</td>";
+        echo "<td>".$user_data['nama']."</td>";
+        echo "<td>".$user_data['alamat']."</td>";
+        echo "<td>".$user_data['jenis_kelamin']."</td>";    
+        echo "<td><a href='edit.php?nim=$user_data[nim]'>Edit</a> | <a href='delete.php?nim=$user_data[nim]'>Delete</a></td></tr>";        
+    }
+    ?>
 
     </table>
     

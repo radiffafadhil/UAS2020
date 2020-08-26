@@ -15,7 +15,7 @@ if(isset($_POST['update']))
     $result = mysqli_query($mysqli, "UPDATE mahasiswa SET nim='$nim', nama='$nama',alamat='$alamat',jenis_kelamin='$jenis_kelamin' WHERE nim=$nim");
 
     // Redirect to homepage to display updated user in list
-    header("Location: view.php");
+    header("Location: index.php");
 }
 ?>
 <?php
@@ -71,7 +71,7 @@ while($user_data = mysqli_fetch_array($result))
         </tr>
             <tr>
                 <td><input type="hidden" name="nim" value=<?php echo $_GET['nim'];?>></td>
-                <td><input type="submit" name="update" value="Update"></td>
+                <td><button type="submit" class="btn btn-primary" name="update" >Update</button></td>
             </tr>
         </table>
     </form>

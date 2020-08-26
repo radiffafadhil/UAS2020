@@ -16,24 +16,24 @@
         <table width="40%" border="0">
             <tr> 
                 <td>NIM</td>
-                <td><input type="text" name="nim"></td>
+                <td><input type="text" name="nim" required="required"></td>
             </tr>
             <tr> 
                 <td>Nama</td>
-                <td><input type="text" name="nama"></td>
+                <td><input type="text" name="nama" required="required"></td>
             </tr>
             <tr> 
                 <td>Alamat</td>
-                <td><input type="text" name="alamat"></td>
+                <td><input type="text" name="alamat" required="required"></td>
             </tr>
             <tr> 
                 <td>Jenis Kelamin :</td>
-                <td><input type="radio" name="jenis_kelamin" value="laki-laki"> Laki-laki</td>
-                <td><input type="radio" name="jenis_kelamin" value="perempuan"> Perempuan</td>
+                <td><input type="radio" name="jenis_kelamin" value="laki-laki" required="required"> Laki-laki</td>
+                <td><input type="radio" name="jenis_kelamin" value="perempuan" required="required"> Perempuan</td>
             </tr>
             <tr> 
                 <td></td>
-                <td><input type="submit" name="Submit" value="tambah"></td>
+                <td><button type="submit" class="btn btn-primary" name="Submit" >Tambah</button></td>
             </tr>
         </table>
     </form>
